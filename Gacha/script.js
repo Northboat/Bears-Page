@@ -25,23 +25,23 @@ const cardData = [
 // Sexy模式卡片数据数组
 const sexyCardData = [
     {
-        name: "性感小猫",
-        description: "活泼又性感的小猫，喜欢撒娇",
+        name: "舔舐",
+        description: "身下液体沾在手指并让对方舔舐 15 秒",
         color: 0xff99bb // 稍深的浅粉色
     },
     {
-        name: "妩媚小兔",
-        description: "温柔妩媚的兔子，让人难以抗拒",
+        name: "克制",
+        description: "3 分钟不进入只摩擦",
         color: 0xff99bb // 稍深的浅粉色
     },
     {
-        name: "诱惑狐狸",
-        description: "充满诱惑的狐狸，狡黠又迷人",
+        name: "挑战",
+        description: "5 分钟后入 100 次不准射",
         color: 0xff99bb // 稍深的浅粉色
     },
     {
-        name: "神秘猫咪",
-        description: "神秘而性感的猫咪，散发着独特魅力",
+        name: "女王",
+        description: "拨开 yc 让他舔 1 分钟",
         color: 0xff99bb // 稍深的浅粉色
     }
 ];
