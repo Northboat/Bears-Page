@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="title">
+            <h1 id="mode-toggle" onclick="toggleSexyMode()">轻语</h1>
+        </div>
+        <div id="canvas-container"></div>
+        <div id="controls">
+            <button id="draw-card">抽取卡片</button>
+        </div>
+        <div id="card-info">
+            <p id="card-description">点击抽卡开始</p>
+        </div>
+    </div>
+    
+    <!-- 引入Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- 引入粒子效果库 -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/particles/ParticleSystem.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
