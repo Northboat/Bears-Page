@@ -56,15 +56,20 @@ function initThreeJS() {
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xfff0f5);
     
+    // 获取容器的实际尺寸
+    const container = document.getElementById('canvas-container');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+    
     // 创建相机
-    camera = new THREE.PerspectiveCamera(75, 600 / 400, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     camera.position.z = 5;
     
     // 创建渲染器
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(600, 400);
+    renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0);
-    document.getElementById('canvas-container').appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
     
     // 添加灯光
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -438,13 +443,24 @@ function animate() {
 
 // 事件监听
 window.addEventListener('DOMContentLoaded', () => {
-    initThreeJS();
-    
-    // 初始化模式标题显示
-    updateModeTitle();
-    
-    const drawButton = document.getElementById('draw-card');
-    drawButton.addEventListener('click', drawCard);
+    // 确保CSS完全加载后再初始化
+    window.addEventListener('load', () => {
+        // 强制设置canvas容器的宽度
+        const canvasContainer = document.getElementById('canvas-container');
+        canvasContainer.style.width = '100%';
+        
+        // 初始化Three.js
+        initThreeJS();
+        
+        // 初始化模式标题显示
+        updateModeTitle();
+        
+        // 手动触发一次窗口 resize 事件，确保 Three.js 内容正确适应容器尺寸
+        window.dispatchEvent(new Event('resize'));
+        
+        const drawButton = document.getElementById('draw-card');
+        drawButton.addEventListener('click', drawCard);
+    });
 });
 
 // 窗口大小调整

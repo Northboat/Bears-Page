@@ -19,6 +19,12 @@ body {
     padding: 20px;
     position: relative;
     z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #title {
@@ -40,7 +46,7 @@ body {
 }
 
 #canvas-container {
-    width: 600px;
+    width: 100%;
     height: 400px;
     margin: 0 auto 30px;
     position: relative;
@@ -50,6 +56,7 @@ body {
     box-shadow: 0 8px 32px rgba(255, 105, 180, 0.3);
     border: 2px solid rgba(255, 255, 255, 0.3);
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 #controls {
@@ -87,8 +94,11 @@ body {
     padding: 20px;
     border-radius: 20px;
     max-width: 500px;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 #card-description {
@@ -97,21 +107,85 @@ body {
     line-height: 1.6;
     font-weight: 500;
     margin: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    max-width: 100%;
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    #canvas-container {
-        width: 100%;
-        height: 300px;
+    body {
+        padding: 10px;
+        overflow-y: auto;
+    }
+    
+    #container {
+        padding: 10px;
+    }
+    
+    #title {
+        margin-bottom: 20px;
     }
     
     #title h1 {
         font-size: 2rem;
     }
     
-    #card-name {
-        font-size: 1.5rem;
+    #canvas-container {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+    
+    #controls {
+        margin-bottom: 20px;
+    }
+    
+    #draw-card {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+    
+    #card-info {
+        padding: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    #card-description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+/* 针对小屏手机的额外优化 */
+@media (max-width: 480px) {
+    #title h1 {
+        font-size: 1.8rem;
+        text-shadow: 2px 2px 0px #ff69b4, 4px 4px 8px rgba(255, 105, 180, 0.3);
+    }
+    
+    #canvas-container {
+        height: 200px;
+    }
+    
+    #draw-card {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    #draw-card .star {
+        font-size: 0.7rem;
+    }
+    
+    #card-info {
+        padding: 12px;
+    }
+    
+    #card-description {
+        font-size: 0.9rem;
     }
 }
 
