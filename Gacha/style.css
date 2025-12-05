@@ -8,10 +8,12 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 50%, #ffd1dc 100%);
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 10px;
 }
 
 #container {
@@ -113,8 +115,8 @@ body {
     max-width: 100%;
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
+/* 响应式设计 - 兼容移动设备 */
+@media only screen and (max-width: 768px), only screen and (max-device-width: 768px) {
     body {
         padding: 10px;
         overflow-y: auto;
@@ -160,8 +162,8 @@ body {
     }
 }
 
-/* 针对小屏手机的额外优化 */
-@media (max-width: 480px) {
+/* 针对小屏手机的额外优化 - 兼容移动设备 */
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
     #title h1 {
         font-size: 1.8rem;
         text-shadow: 2px 2px 0px #ff69b4, 4px 4px 8px rgba(255, 105, 180, 0.3);

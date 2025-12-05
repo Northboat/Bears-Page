@@ -56,19 +56,32 @@ function initThreeJS() {
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xfff0f5);
     
-    // 获取容器的实际尺寸
+    // 获取容器的实际尺寸，确保在移动设备上能正确获取
     const container = document.getElementById('canvas-container');
-    const width = container.clientWidth;
-    const height = container.clientHeight;
     
-    // 创建相机
-    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    // 强制设置容器的宽度和高度，确保在移动设备上能正确显示
+    container.style.width = '100%';
+    container.style.height = 'auto';
+    
+    // 使用offsetWidth和offsetHeight获取实际渲染尺寸
+    const width = container.offsetWidth;
+    const height = Math.max(container.offsetHeight, 200); // 确保最小高度
+    
+    // 创建相机，根据移动设备调整视角
+    const aspectRatio = width / height;
+    camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
     camera.position.z = 5;
     
     // 创建渲染器
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setClearColor(0x000000, 0);
+    
+    // 确保渲染器的像素比适应移动设备
+    renderer.setPixelRatio(window.devicePixelRatio);
+    
+    // 清空容器并添加渲染器
+    container.innerHTML = '';
     container.appendChild(renderer.domElement);
     
     // 添加灯光
