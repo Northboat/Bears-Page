@@ -40,6 +40,16 @@ const sexyCardData = [
         color: 0xff99bb // 稍深的浅粉色
     },
     {
+        name: "教学",
+        description: "手把手同时触摸 a 点和 g 点 15 秒",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "比赛",
+        description: "一起看着对方自慰 3 分钟",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
         name: "女王",
         description: "拨开 yc 让他舔 1 分钟",
         color: 0xff99bb // 稍深的浅粉色
