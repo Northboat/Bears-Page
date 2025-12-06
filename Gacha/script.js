@@ -1,23 +1,23 @@
 // 正常模式卡片数据数组（4个粉色系逐渐变深，更浅一级）
 const cardData = [
     {
-        name: "爱心小熊",
-        description: "一只充满爱心的粉色小熊，总是给大家带来温暖",
+        name: "雷电将军",
+        description: "稻妻的雷神，追求永恒的守护者",
         color: 0xffa0a0 // 浅粉色加深
     },
     {
-        name: "彩虹小兔",
-        description: "拥有彩虹尾巴的可爱兔子，喜欢在阳光下跳跃",
+        name: "胡桃",
+        description: "往生堂堂主，活泼开朗的少女",
         color: 0xffa0a0 // 浅粉色加深
     },
     {
-        name: "星星猫咪",
-        description: "眼睛像星星一样闪亮的小猫，夜晚会发出柔和的光芒",
+        name: "甘雨",
+        description: "半仙之兽，璃月七星的秘书",
         color: 0xffa0a0 // 浅粉色加深
     },
     {
-        name: "云朵小狗",
-        description: "毛茸茸的小狗，身体像云朵一样柔软",
+        name: "神里绫华",
+        description: "神里家的千金，优雅动人的白鹭公主",
         color: 0xffa0a0 // 浅粉色加深
     }
 ];
