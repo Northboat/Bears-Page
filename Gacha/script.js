@@ -118,8 +118,27 @@ function initThreeJS() {
 
 // 创建3D卡片
 function createCard() {
-    // 卡片几何体
-    const geometry = new THREE.PlaneGeometry(3, 4, 32);
+    // 创建圆角矩形的Shape
+    function createRoundedRectangle(width, height, radius) {
+        const shape = new THREE.Shape();
+        
+        // 从左上角开始创建圆角矩形路径
+        shape.moveTo(-width/2 + radius, height/2);
+        shape.lineTo(width/2 - radius, height/2);
+        shape.quadraticCurveTo(width/2, height/2, width/2, height/2 - radius);
+        shape.lineTo(width/2, -height/2 + radius);
+        shape.quadraticCurveTo(width/2, -height/2, width/2 - radius, -height/2);
+        shape.lineTo(-width/2 + radius, -height/2);
+        shape.quadraticCurveTo(-width/2, -height/2, -width/2, -height/2 + radius);
+        shape.lineTo(-width/2, height/2 - radius);
+        shape.quadraticCurveTo(-width/2, height/2, -width/2 + radius, height/2);
+        
+        return shape;
+    }
+    
+    // 创建圆角矩形几何体
+    const roundedRectShape = createRoundedRectangle(3, 4, 0.4); // 0.4是圆角半径
+    const geometry = new THREE.ShapeGeometry(roundedRectShape, 32);
     
     // 创建卡片材质
     const material = new THREE.MeshPhongMaterial({
