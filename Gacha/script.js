@@ -22,39 +22,6 @@ const cardData = [
     }
 ];
 
-// Sexy模式卡片数据数组
-const sexyCardData = [
-    {
-        name: "舔舐",
-        description: "身下液体沾在手指并让对方舔舐 15 秒",
-        color: 0xff99bb // 稍深的浅粉色
-    },
-    {
-        name: "克制",
-        description: "3 分钟不进入只摩擦",
-        color: 0xff99bb // 稍深的浅粉色
-    },
-    {
-        name: "挑战",
-        description: "5 分钟后入 100 次不准射",
-        color: 0xff99bb // 稍深的浅粉色
-    },
-    {
-        name: "教学",
-        description: "手把手同时触摸 a 点和 g 点 15 秒",
-        color: 0xff99bb // 稍深的浅粉色
-    },
-    {
-        name: "比赛",
-        description: "一起看着对方自慰 3 分钟",
-        color: 0xff99bb // 稍深的浅粉色
-    },
-    {
-        name: "女王",
-        description: "拨开 yc 让他舔 1 分钟",
-        color: 0xff99bb // 稍深的浅粉色
-    }
-];
 
 // 全局变量
 let scene, camera, renderer, card, cardText, particles, particleSystem;
@@ -518,3 +485,44 @@ window.addEventListener('resize', () => {
         renderer.setSize(width, height);
     }
 });
+
+
+
+// Sexy模式卡片数据数组
+const sexyCardData = [
+    {
+        name: "舔舐",
+        description: "身下液体沾在手指并让对方舔舐 15 秒",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "克制",
+        description: "3 分钟不进入只摩擦",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "挑战",
+        description: "5 分钟后入 100 次不准射",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "教学",
+        description: "手把手同时触摸 a 点和 g 点 15 秒",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "比赛",
+        description: "一起看着对方自慰 3 分钟",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "相互",
+        description: "为对方按摩直到勃起/流水",
+        color: 0xff99bb // 稍深的浅粉色
+    },
+    {
+        name: "女王",
+        description: "拨开 yc 让他舔 1 分钟",
+        color: 0xff99bb // 稍深的浅粉色
+    }
+];
